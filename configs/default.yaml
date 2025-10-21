@@ -1,0 +1,21 @@
+# Default configuration for Embodied Crowd Counting
+
+model:
+  in_channels: 3
+  base_channels: 64
+
+training:
+  batch_size: 8
+  num_epochs: 100
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+  num_workers: 4
+
+data:
+  root_dir: ./data
+  image_size: [512, 512]
+
+logging:
+  log_dir: ./logs
+  checkpoint_dir: ./checkpoints
+  save_frequency: 10
