@@ -46,8 +46,8 @@ logs/
 *.log
 
 # Data
-data/
-datasets/
+/data/
+/datasets/
 *.zip
 *.tar.gz
 
