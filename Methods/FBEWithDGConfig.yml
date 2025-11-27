@@ -1,0 +1,42 @@
+Record_root: 'Record/'
+
+Drone:
+  ip : "127.0.0.1"
+  takeoff_height : -8
+  takeoff_speed : 2
+  speed : 2
+  acceleration : 0.5
+  yaw_rate : 15
+  yaw_acceleration : 90
+  depth_threshold : 500
+
+Simulator:
+  route_path : ""
+  ground_truth_path : ""
+
+# FBE策略参数
+Explore:
+  frontier_size : 5
+  frontier_divide_size : 30
+  explore_range : 80
+  obstacle_thick : 1
+
+# 控制无人机升降的模块，FBE策略只会用到LBE_height参数
+DroneLift:
+  HBE_height: 60
+  LBE_height: 8
+  speed: 2
+
+GroundingDINO:
+  box_threshold : 0.7
+  low_box_threshold : 0.25
+  text_threshold : 0.25
+  device: 'cuda'
+
+DensityGuide:
+  voxel_size : [-1,-1,5]
+  height_range : [6, -7]
+  density_map_threshold : 0.2
+  GM_cluster_size : 40
+  navi_vector_degree : 30
+  navi_point_range : 10

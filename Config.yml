@@ -1,0 +1,114 @@
+Record_root: 'Record/'
+
+Drone:
+  ip : "127.0.0.1"
+  takeoff_height : -8
+  takeoff_speed : 2
+  speed : 2
+  acceleration : 0.5
+  yaw_rate : 15
+  yaw_acceleration : 90
+  depth_threshold : 500
+
+Explore:
+  frontier_size : 5
+  frontier_divide_size : 30
+  explore_range : 80
+  density_map_threshold : 0.5
+  voxel_size : [20,20,5]
+  FBE_heights : [20,10,5,0,-10,-20,-30]  # grid based
+  # FBE_heights : [-43.1]  # grid based
+  height_range : [6, -7]
+  GM_cluster_size : 40
+  navi_vector_degree : 25
+  navi_point_range : 10
+  obstacle_thick : 1
+
+GroundingDINO:
+  box_threshold : 0.5
+  low_box_threshold : 0.25
+  text_threshold : 0.25
+  device: 'cuda'
+
+MultiModal:
+  model_name : 'gpt-4o'
+  temperature : 0
+
+SAM2:
+  sam2_checkpoint : "Vision_models/SAM2/checkpoints/sam2_hiera_large.pt"
+  cfg_dir : "F:/project/Vision_models/SAM2/sam2_configs/"
+  model_cfg : "sam2_hiera_l.yaml"
+  
+Agent:
+  # model_name : 'gpt-3.5-turbo'
+  model_name : 'gpt-4'
+  temperature : 0
+  OPENAI_API_KEY: ""
+
+Simulator:
+  route_path : "E:/Workplace/Unreal/CityPark2/Project/Route/route.csv"
+  ground_truth_path : "E:/Workplace/Unreal/CityPark2/Project/Location/man/location.csv"
+
+Capture:
+  camera : [2] # [0,1,4,2,3]: front -> left -> back -> right -> down
+
+Count:
+  camera : [0,1,2,4]
+  detection_prompt : 'person.'
+  record_path : "demo/"
+  distance_threshold : 80
+  same_target_threshold_horiz : 0.5
+  same_target_threshold_verti : 2
+  max_area : 0.6
+  match_threshold : 0.5
+  density_threshold : 0.1
+
+OPENFM:
+  same_target_threshold : 0.5
+
+ValueMap:
+  prompt: 'person.'
+  LLM_score: 0.5
+  high_LLM_score: 0.7
+
+DroneLift:
+  HBE_height: 60
+  LBE_height: 5
+  speed: 2
+
+ModifyExplore:
+  low_frontier_size : 10
+  # up condition 
+  up_frontier_size : 25
+  low_frontier_divide_size : 30
+  # up condition 
+  up_frontier_divide_size : 50
+  low_explore_range: 40  
+  up_explore_range: 70
+  low_explore_limit: 1
+  frontier_check_range: 3
+  minimum_target_num: 5
+  give_up_prob: 0.8
+  obstacle_thick : 2
+  up_frontier_divide_size: 20
+  llm_score_thresh: 0.2
+
+LLMJudge:
+  model_name : 'gpt-4'
+  temperature : 0
+  OPENAI_API_KEY: ""
+
+GPT:
+  model_name : 'gpt-4o'
+  temperature : 0
+  OPENAI_API_KEY: ""
+
+LowDG:
+  voxel_size : [20,20,5]
+  height_range : [6, -7]
+  density_map_threshold : 0.3
+  GM_cluster_size : 40
+  navi_vector_degree : 25
+  navi_point_range : 10
+
+

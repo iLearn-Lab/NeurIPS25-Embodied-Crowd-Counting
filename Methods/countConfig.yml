@@ -1,0 +1,28 @@
+Record_root: 'Record/'
+
+Drone:
+  ip : "127.0.0.1"
+  takeoff_height : -5
+  takeoff_speed : 2
+  speed : 2
+  acceleration : 0.5
+  yaw_rate : 15
+  yaw_acceleration : 90
+  depth_threshold : 500
+
+Count:
+  camera : [0,1,2,4]
+  detection_prompt : 'human face.human.person.people.'
+  record_path : "/"
+  distance_threshold : 40
+  same_target_threshold_horiz : 0.5
+  same_target_threshold_verti : 2
+  max_area : 0.6
+  match_threshold : 0.5
+  density_threshold : 0.4
+
+GroundingDINO:
+  box_threshold : 0.3
+  low_box_threshold : 0.25
+  text_threshold : 0.25
+  device: 'cuda'

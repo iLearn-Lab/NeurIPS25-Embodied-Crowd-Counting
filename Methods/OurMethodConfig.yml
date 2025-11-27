@@ -1,0 +1,86 @@
+Record_root: 'Record/'
+
+Drone:
+  ip : "127.0.0.1"
+  takeoff_height : -8
+  takeoff_speed : 2
+  speed : 2
+  acceleration : 0.5
+  yaw_rate : 15
+  yaw_acceleration : 90
+  depth_threshold : 500
+
+Simulator:
+  route_path : ""
+  ground_truth_path : ""
+  navigation_path : ""
+
+OurExplore:
+
+  frontier_size : 10
+  
+  # 障碍膨胀
+  obstacle_thick : 2
+
+  # 高空探索参数
+  up_frontier_size : 25
+  up_frontier_divide_size : 50
+  up_explore_range: 60
+  up_frontier_divide_size: 20
+
+  # 低空探索参数
+  low_frontier_size : 10
+  low_frontier_divide_size : 30
+  low_explore_range: 40
+  low_explore_limit: 1
+
+  # 边界放弃参数
+  frontier_check_range: 10
+  minimum_target_num: 5
+  give_up_prob: 0.8
+
+  # 大语言模型打分参数
+  llm_score_thresh: 0.3
+
+DensityGuide:
+  voxel_size : [20,20,5]
+  height_range : [6, -7]
+  density_map_threshold : 0.3
+  GM_cluster_size : 40
+  navi_vector_degree : 25
+  navi_point_range : 10
+
+LLMJudge:
+  model_name : 'gpt-4'
+  temperature : 0
+  OPENAI_API_KEY: ""
+
+# 控制无人机升降的模块
+DroneLift:
+  HBE_height: 60
+  LBE_height: 8
+  speed: 2
+
+# 设置ValueMap的参数
+ValueMap:
+  prompt: 'person.'
+  LLM_score: 0.5
+  high_LLM_score: 0.7
+
+GroundingDINO:
+  box_threshold : 0.5
+  low_box_threshold : 0.25
+  text_threshold : 0.25
+  device: 'cuda'
+
+GPT:
+  model_name : 'gpt-4o'
+  temperature : 0
+  OPENAI_API_KEY: ""
+
+Qwen:
+  API_KEY: ""
+
+# LLM_name: 'Qwen7B'
+# LLM_name: 'GPT4o'
+LLM_name: 'Qwen'

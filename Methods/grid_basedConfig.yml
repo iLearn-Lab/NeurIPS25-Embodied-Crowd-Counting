@@ -1,0 +1,34 @@
+Record_root: 'Record/'
+
+Explore:
+  frontier_size : 5
+  frontier_divide_size : 30
+  explore_range : 20
+  density_map_threshold : 0.7
+  voxel_size : [-1,-1,5]
+  FBE_heights : [0]  # grid based
+  # FBE_heights : [-43.1]  # grid based
+  height_range : [6, -7]
+  GM_cluster_size : 35
+  navi_vector_degree : 15
+  navi_point_range : 8
+  obstacle_thick : 1
+
+Simulator:
+  route_path : ""
+  ground_truth_path : ""
+
+Drone:
+  ip : "127.0.0.1"
+  takeoff_height : -8
+  takeoff_speed : 2
+  speed : 2
+  acceleration : 0.5
+  yaw_rate : 15
+  yaw_acceleration : 90
+  depth_threshold : 500
+
+DroneLift:
+  HBE_height: 60
+  LBE_height: 5
+  speed: 2
