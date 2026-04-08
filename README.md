@@ -1,6 +1,6 @@
 # `Embodied Crowd Counting`
 
-> `Interactive crowd counting dataset and a MLLM driven cross-to-fine counting agent.`
+> `Interactive crowd counting dataset and an MLLM-driven coarse-to-fine counting agent.`
 
 ## Authors
 
@@ -13,7 +13,7 @@
 ## Links
 
 - **Paper**: [`Paper Link`](<https://arxiv.org/pdf/2503.08367>)
-- **Hugging Face Dataset**: We will opensource the dataset this May. Sorry for the delay.
+- **Hugging Face Dataset**: We will open-source the dataset this May. Sorry for the delay.
 - **Code Repository**: [`GitHub`](https://github.com/iLearn-Lab/NeurIPS25-Embodied-Crowd-Counting)
 
 ---
@@ -44,7 +44,7 @@
 This is the official implementation for **Embodied Crowd Counting**.
 
 Occlusion is one of the fundamental challenges in crowd counting. In the community, various data-driven approaches have been developed to address this issue, yet their effectiveness is limited. This is mainly because most existing crowd counting datasets on which the methods are trained are based on passive cameras, restricting their ability to fully sense the environment.
-Recently, embodied navigation methods have shown significant potential in precise object detection in interactive scenes. These methods incorporate active camera settings, holding promise in addressing the fundamental issues in crowd counting. However, most existing methods are designed for indoor navigation, showing unknown performance in analyzing complex object distribution in large-scale scenes, such as crowds. Besides, most existing embodied navigation datasets are indoor scenes with limited scale and object quantity, preventing them from being introduced into dense crowd analysis. Based on this, a novel task, Embodied Crowd Counting (ECC), is proposed to count the number of persons in a large-scale scene actively. We then build up an interactive simulator, the Embodied Crowd Counting Dataset (ECCD), which enables large-scale scenes and large object quantities. A prior probability distribution approximating a realistic crowd distribution is introduced to generate crowds. Then, a zero-shot navigation method (ZECC) is proposed as a baseline. This method contains an MLLM-driven coarse-to-fine navigation mechanism, enabling active Z-axis exploration, and a normal-line-based crowd distribution analysis method for fine counting. Experimental results show that the proposed method achieves the best trade-off between counting accuracy and navigation cost.
+Recently, embodied navigation methods have shown significant potential for precise object detection in interactive scenes. These methods incorporate active camera settings, holding promise for addressing the fundamental issues in crowd counting. However, most existing methods are designed for indoor navigation, showing unknown performance in analyzing complex object distributions in large-scale scenes, such as crowds. In addition, most existing embodied navigation datasets are indoor scenes with limited scale and object quantity, preventing them from being introduced into dense crowd analysis. Based on this, a novel task, Embodied Crowd Counting (ECC), is proposed to count the number of persons in a large-scale scene actively. We then build an interactive simulator, the Embodied Crowd Counting Dataset (ECCD), which enables large-scale scenes and large object quantities. A prior probability distribution approximating a realistic crowd distribution is introduced to generate crowds. Then, a zero-shot navigation method (ZECC) is proposed as a baseline. This method contains an MLLM-driven coarse-to-fine navigation mechanism, enabling active Z-axis exploration, and a normal-line-based crowd distribution analysis method for fine-grained counting. Experimental results show that the proposed method achieves the best trade-off between counting accuracy and navigation cost.
 
 We present the dataset and the method implementation in this page.
 
@@ -52,7 +52,7 @@ We present the dataset and the method implementation in this page.
 
 ## Highlights
 
-- We provide the full pipline of our method.
+- We provide the full pipeline of our method.
 - The dataset will be ready for further studies.
 
 ---
@@ -132,7 +132,7 @@ We present the dataset and the method implementation in this page.
 
 ## Installation
 
-Note that this project only supports Windows currently.
+Note that this project currently supports Windows only.
 
 ### 1. Clone the repository
 
@@ -152,7 +152,7 @@ pip install -r requirements.txt
 ## TODO
 
 - [ ] Upload the dataset.
-- [ ] Complete the instruction.
+- [ ] Complete the instructions.
 
 ---
 
