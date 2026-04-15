@@ -1,0 +1,25 @@
+Record_root: 'Record/'
+
+Drone:
+  ip : "127.0.0.1"
+  speed : 2
+  yaw_rate : 15
+  depth_threshold : 500
+
+Explore:
+
+  frontier_size : 10
+  frontier_divide_size : 30
+  explore_range : 60
+  obstacle_thick : 1
+
+DroneLift:
+  LBE_height: 5
+  speed: 2
+
+DensityGuide:
+  voxel_size : [-1,-1,5]
+  density_map_threshold : 0.2
+  GM_cluster_size : 40
+  navi_vector_degree : 25
+  navi_point_range : 10

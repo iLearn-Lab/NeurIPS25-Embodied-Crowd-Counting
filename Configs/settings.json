@@ -1,0 +1,30 @@
+{
+	"SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/main/docs/settings.md",
+	"SettingsVersion": 1.2,
+	"SimMode": "ComputerVision",
+	"ViewMode": "SpringArmChase",
+	"CameraDefaults": {
+	  "CaptureSettings": [
+		{
+		  "ImageType": 0,
+		  "Width": 800,
+		  "Height": 800
+		},
+	    {
+		  "ImageType": 1,
+		  "Width": 800,
+		  "Height": 800
+		},
+		{
+		  "ImageType": 3,
+		  "Width": 800,
+		  "Height": 800
+		},
+		{
+		  "ImageType": 5,
+		  "Width": 800,
+		  "Height": 800
+		}
+	  ]
+	}
+}
